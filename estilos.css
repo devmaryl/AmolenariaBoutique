@@ -11,7 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--negro);
-    scroll-behavior: smooth;
+    background-color: white;
 }
 
 .container {
@@ -20,71 +20,55 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header y Logo */
 .top-bar { background-color: var(--rosa-pastel); text-align: center; padding: 10px; font-size: 11px; letter-spacing: 2px; }
 
-header { padding: 20px 0; border-bottom: 1px solid #f4f4f4; }
-.header-flex { display: flex; flex-direction: column; align-items: center; }
+header { padding: 30px 0; border-bottom: 1px solid #eee; text-align: center; }
 
-.logo { width: 160px; border-radius: 50%; margin-bottom: 15px; }
+.logo { width: 160px; border-radius: 50%; margin-bottom: 20px; }
 
-nav ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 15px 0; }
+nav ul { display: flex; justify-content: center; list-style: none; gap: 30px; }
 nav a { text-decoration: none; color: var(--negro); font-weight: 600; font-size: 13px; }
 
-.menu-toggle { display: none; }
-
-/* Hero */
-.hero {
+/* Hero / Carrusel */
+.hero-simple {
     background-color: var(--crema);
-    padding: 100px 0;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.hero h1 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 10px; }
+.hero-simple h1 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 10px; }
 
-.btn-rosa {
-    display: inline-block;
-    background-color: var(--rosa-fuerte);
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/* Productos Grilla */
+/* Grilla de Productos */
 .titulo-seccion { text-align: center; margin: 60px 0 40px; font-family: 'Playfair Display', serif; font-size: 32px; }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     justify-items: center;
 }
 
-.product-card { text-align: center; width: 100%; transition: 0.3s; }
-.product-card:hover { transform: translateY(-5px); }
+.product-card { text-align: center; width: 100%; max-width: 300px; }
 
 .product-card img {
     width: 100%;
-    height: 400px;
+    height: 380px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 15px;
-    background-color: var(--crema);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.product-card h3 { font-size: 16px; margin-bottom: 5px; font-weight: 400; }
-
-/* Sobre Mi */
-.sobre-mi { background-color: var(--crema); padding: 80px 0; text-align: center; margin-top: 60px; }
-.sobre-mi-texto { max-width: 700px; margin: 0 auto; }
+/* Tabla de Talles */
+.seccion-talles { background-color: var(--crema); padding: 60px 20px; text-align: center; margin-top: 60px; }
+.tabla-talles { width: 100%; max-width: 500px; margin: 30px auto; border-collapse: collapse; background: white; }
+.tabla-talles th, .tabla-talles td { padding: 15px; border: 1px solid var(--rosa-pastel); }
+.tabla-talles th { background-color: var(--rosa-fuerte); color: white; }
 
 /* Footer */
-footer { background-color: var(--negro); color: white; padding: 60px 0 20px; margin-top: 0; }
-.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; }
-.copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 11px; opacity: 0.7; }
+footer { background-color: var(--negro); color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
 
 /* WhatsApp */
 .whatsapp-btn { position: fixed; bottom: 25px; right: 25px; width: 60px; z-index: 1000; }
+
