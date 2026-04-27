@@ -4,96 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amolenaria Boutique | Calzado e Indumentaria</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
 
+<body id="top">
+
+    <!-- Barra superior -->
     <div class="top-bar">🌸 ENVÍOS POR ZONA (MOTO O RETIRO) 🌸</div>
 
+    <!-- Header -->
     <header>
         <div class="container">
-            <img src="logo.jpg" alt="Amolenaria Boutique" class="logo">
+            <img src="logo.jpg" alt="Logo de Amolenaria Boutique" class="logo">
+
             <nav>
                 <ul>
-                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#top">INICIO</a></li>
                     <li><a href="#productos">CATÁLOGO</a></li>
                     <li><a href="#como-comprar">¿CÓMO COMPRAR?</a></li>
                     <li><a href="#talles">TALLES</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero-simple">
         <div class="container">
             <h1>Amolenaria Boutique</h1>
-            <p>Calzado, Pijamas, Bikinis e Indumentaria </p>
-            <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">Venta por stock y por encargo </p>
+            <p>Calzado, Pijamas, Bikinis e Indumentaria</p>
+            <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">
+                Venta por stock y por encargo
+            </p>
+
+            <a href="#productos" class="btn-principal">Ver catálogo</a>
         </div>
     </section>
 
+    <!-- Cómo comprar -->
     <section id="como-comprar" class="pasos-compra">
         <div class="container">
             <h2 class="titulo-seccion">Cómo hacer tu pedido</h2>
+
             <div class="pasos-grid">
                 <div class="paso">
                     <span class="numero">1</span>
                     <p>Elegí tu modelo favorito del catálogo.</p>
                 </div>
+
                 <div class="paso">
                     <span class="numero">2</span>
-                    <p>Consultanos stock y talle por WhatsApp[cite: 57, 75].</p>
+                    <p>Consultanos stock y talle por WhatsApp.</p>
                 </div>
+
                 <div class="paso">
                     <span class="numero">3</span>
-                    <p>Coordinamos el pago y el envío por zona[cite: 59, 66].</p>
+                    <p>Coordinamos el pago y el envío por zona.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Catálogo -->
     <main class="container" id="productos">
         <h2 class="titulo-seccion">Nuestro Catálogo</h2>
         <div class="product-grid" id="grid-productos"></div>
     </main>
 
+    <!-- Talles -->
     <section id="talles" class="seccion-talles">
         <div class="container">
             <h2>Guía de Talles</h2>
-            <p>Recordá que los talles pueden variar según el modelo[cite: 12, 52].</p>
+            <p>Recordá que los talles pueden variar según el modelo.</p>
+
             <table class="tabla-talles">
-                <thead><tr><th>Talle</th><th>Medida aprox. (cm)</th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>Talle</th>
+                        <th>Medida aprox. (cm)</th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <tr><td>35</td><td>22.5 cm</td></tr><tr><td>36</td><td>23.5 cm</td></tr>
-                    <tr><td>37</td><td>24.0 cm</td></tr><tr><td>38</td><td>25.0 cm</td></tr>
-                    <tr><td>39</td><td>25.5 cm</td></tr><tr><td>40</td><td>26.5 cm</td></tr>
+                    <tr><td>35</td><td>22.5 cm</td></tr>
+                    <tr><td>36</td><td>23.5 cm</td></tr>
+                    <tr><td>37</td><td>24.0 cm</td></tr>
+                    <tr><td>38</td><td>25.0 cm</td></tr>
+                    <tr><td>39</td><td>25.5 cm</td></tr>
+                    <tr><td>40</td><td>26.5 cm</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- CONTACTO (FORMULARIO) -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="container">
+            <h2 class="titulo-seccion">Contacto</h2>
+
+            <form action="https://formspree.io/f/xeevwaka" method="POST" class="formulario">
+
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <input type="email" name="email" placeholder="Tu email" required>
+
+                <textarea name="mensaje" placeholder="Contanos qué estás buscando..." required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
+
             <div class="footer-section">
-                <h4>PAGOS [cite: 16, 59]</h4>
+                <h4>PAGOS</h4>
                 <p>💵 Efectivo / Transferencia</p>
                 <p>📲 Mercado Pago</p>
             </div>
+
             <div class="footer-section">
-                <h4>ENTREGAS [cite: 23, 64]</h4>
+                <h4>ENTREGAS</h4>
                 <p>🛵 Moto en zona</p>
                 <p>🏠 Retiro en domicilio</p>
             </div>
+
         </div>
-        <p class="copyright">&copy; 2026 Amolenaria Boutique - Hecho por Mary</p>
+
+        <p class="copyright">
+            &copy; 2026 Amolenaria Boutique - Hecho por Mary
+        </p>
     </footer>
 
-    <a href="https://wa.me/54911XXXXXXXX" class="whatsapp-btn" target="_blank">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5491111111111" class="whatsapp-btn" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
+    <!-- JS -->
     <script src="script.js"></script>
+
 </body>
 </html>
-
