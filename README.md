@@ -16,10 +16,11 @@ A través de un proceso de análisis con la dueña del negocio, se identificaron
 - **Call to Action:** Botón de WhatsApp integrado para contacto directo.
 
 ## Tecnologías utilizadas
-- HTML5
-- CSS3 (Diseño responsivo y personalizado)
+- HTML
+- CSS (Diseño responsivo y personalizado)
 - JavaScript (Inyección dinámica de productos)
-- Git & GitHub (Control de versiones y despliegue)
+- Git (Control de versiones)
+- GitHub (Gestión de repositorio y despliegue)
 
 ## Desarrollado por
 **María Laura Robledo Castro** - Analista de Sistemas
