@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amolenaria Boutique - Tienda online de calzado, bikinis, pijamas e indumentaria. Comprá por encargo o stock con envíos por zona.">
     <title>Amolenaria Boutique | Calzado e Indumentaria</title>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body id="top">
+
+    <!-- Toast -->
+    <div id="toast"></div>
+
+    <!-- Overlay del carrito -->
+    <div id="overlay-carrito"></div>
+
+    <!-- Drawer del carrito -->
+    <div id="drawer-carrito">
+        <div class="drawer-header">
+            <h3>Tu carrito 🛒</h3>
+            <button id="cerrar-drawer">✕</button>
+        </div>
+        <div id="lista-carrito"></div>
+        <div id="total-carrito"></div>
+    </div>
 
     <!-- Barra superior -->
     <div class="top-bar">🌸 ENVÍOS POR ZONA (MOTO O RETIRO) 🌸</div>
@@ -21,7 +34,6 @@
     <header>
         <div class="container">
             <img src="logo.jpg" alt="Logo de Amolenaria Boutique" class="logo">
-
             <nav>
                 <ul>
                     <li><a href="#top">INICIO</a></li>
@@ -29,6 +41,11 @@
                     <li><a href="#como-comprar">¿CÓMO COMPRAR?</a></li>
                     <li><a href="#talles">TALLES</a></li>
                     <li><a href="#contacto">CONTACTO</a></li>
+                    <li>
+                        <button id="btn-carrito" class="btn-carrito-nav">
+                            🛒 <span id="contador-carrito">0</span>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +59,6 @@
             <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">
                 Venta por stock y por encargo
             </p>
-
             <a href="#productos" class="btn-principal">Ver catálogo</a>
         </div>
     </section>
@@ -51,18 +67,15 @@
     <section id="como-comprar" class="pasos-compra">
         <div class="container">
             <h2 class="titulo-seccion">Cómo hacer tu pedido</h2>
-
             <div class="pasos-grid">
                 <div class="paso">
                     <span class="numero">1</span>
                     <p>Elegí tu modelo favorito del catálogo.</p>
                 </div>
-
                 <div class="paso">
                     <span class="numero">2</span>
                     <p>Consultanos stock y talle por WhatsApp.</p>
                 </div>
-
                 <div class="paso">
                     <span class="numero">3</span>
                     <p>Coordinamos el pago y el envío por zona.</p>
@@ -80,9 +93,10 @@
     <!-- Talles -->
     <section id="talles" class="seccion-talles">
         <div class="container">
-            <h2>Guía de Talles</h2>
-            <p>Recordá que los talles pueden variar según el modelo.</p>
+            <h2 class="titulo-seccion">Guía de Talles</h2>
+            <p>Recordá que los talles pueden variar según el modelo. Ante cualquier duda, consultanos por WhatsApp 🌸</p>
 
+            <h3 class="subtitulo-talles">Calzado</h3>
             <table class="tabla-talles">
                 <thead>
                     <tr>
@@ -99,24 +113,36 @@
                     <tr><td>40</td><td>26.5 cm</td></tr>
                 </tbody>
             </table>
+
+            <h3 class="subtitulo-talles">Indumentaria</h3>
+            <table class="tabla-talles">
+                <thead>
+                    <tr>
+                        <th>Talle</th>
+                        <th>Busto (cm)</th>
+                        <th>Cintura (cm)</th>
+                        <th>Cadera (cm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>S</td><td>84–88</td><td>64–68</td><td>90–94</td></tr>
+                    <tr><td>M</td><td>88–92</td><td>68–72</td><td>94–98</td></tr>
+                    <tr><td>L</td><td>92–96</td><td>72–76</td><td>98–102</td></tr>
+                    <tr><td>XL</td><td>96–100</td><td>76–80</td><td>102–106</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
-    <!-- CONTACTO (FORMULARIO) -->
+    <!-- Contacto -->
     <section id="contacto" class="seccion-contacto">
         <div class="container">
             <h2 class="titulo-seccion">Contacto</h2>
-
-            <form action="https://formspree.io/f/xeevwaka" method="POST" class="formulario">
-
+            <form action="https://formspree.io/f/xeevwaka" method="POST" class="formulario" novalidate>
                 <input type="text" name="nombre" placeholder="Tu nombre" required>
-
                 <input type="email" name="email" placeholder="Tu email" required>
-
                 <textarea name="mensaje" placeholder="Contanos qué estás buscando..." required></textarea>
-
                 <button type="submit">Enviar mensaje</button>
-
             </form>
         </div>
     </section>
@@ -124,21 +150,17 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-
             <div class="footer-section">
                 <h4>PAGOS</h4>
                 <p>💵 Efectivo / Transferencia</p>
                 <p>📲 Mercado Pago</p>
             </div>
-
             <div class="footer-section">
                 <h4>ENTREGAS</h4>
                 <p>🛵 Moto en zona</p>
                 <p>🏠 Retiro en domicilio</p>
             </div>
-
         </div>
-
         <p class="copyright">
             &copy; 2026 Amolenaria Boutique - Hecho por Mary
         </p>
@@ -149,8 +171,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <!-- JS -->
     <script src="script.js"></script>
-
 </body>
 </html>
