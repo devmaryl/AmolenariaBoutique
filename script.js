@@ -1,3 +1,4 @@
+// ── PRODUCTOS ────────────────────────────────────────────────────
 const productos = [
     {
         id: 1,
@@ -228,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iniciarFormulario();
     actualizarContador();
 
+    // Carrito
     const btnCarrito = document.getElementById('btn-carrito');
     if (btnCarrito) btnCarrito.addEventListener('click', abrirDrawer);
 
@@ -236,5 +238,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const overlay = document.getElementById('overlay-carrito');
     if (overlay) overlay.addEventListener('click', cerrarDrawer);
-});
 
+    // Menú hamburguesa
+    const bar    = document.getElementById('bar');
+    const close  = document.getElementById('close');
+    const navBar = document.getElementById('napa');
+
+    if (bar) {
+        bar.addEventListener('click', () => {
+            navBar.classList.add('active');
+        });
+    }
+
+    if (close) {
+        close.addEventListener('click', () => {
+            navBar.classList.remove('active');
+        });
+    }
+
+    // Cerrar el menú al hacer clic en un enlace (mobile)
+    if (navBar) {
+        navBar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navBar.classList.remove('active');
+            });
+        });
+    }
+});

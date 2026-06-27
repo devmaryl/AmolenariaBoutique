@@ -553,11 +553,54 @@ footer h4 {
     transform: scale(1.1);
 }
 
+/* HAMBURGUESA */
+#bar {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--negro);
+}
+
+#close {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--gris);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    nav ul {
+
+    #bar {
+        display: block;
+    }
+
+    #napa {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 260px;
+        height: 100%;
+        background: #fff;
+        padding: 30px 25px;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+        z-index: 500;
+        transition: right 0.35s ease;
+    }
+
+    #napa.active {
+        display: flex;
+        right: 0;
+    }
+
+    #close {
+        display: block;
+        align-self: flex-end;
+        font-size: 22px;
+        margin-bottom: 10px;
     }
 
     .hero-simple h1 {
